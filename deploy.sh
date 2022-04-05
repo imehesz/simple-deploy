@@ -38,7 +38,7 @@ elif [ $1 == "live" ]
         elif [ $2 == "go" ]
             then
                 echo "Running actual deploy"
-                rsync -az --force --delete --progress --exclude-from=rsync_exclude.txt -e "ssh -p$PRODPORT" ./ $PRODUSER@PRODSERVER:$PRODDESTINATION
+                rsync -az --force --delete --progress --exclude-from=rsync_exclude.txt -e "ssh -p$PRODPORT" ./ $PRODUSER@$PRODSERVER:$PRODDESTINATION
         else
             echo $ERRORSTRING;
         fi
