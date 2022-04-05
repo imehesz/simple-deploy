@@ -10,7 +10,7 @@ fi
 echo "Production Server [enter]:";
 read PRODSERVER;
 
-if [ -n "$PRODUSER" ]; then
+if [ -n "$PRODSERVER" ]; then
   PRODSERVER="google.com";
 fi
 
